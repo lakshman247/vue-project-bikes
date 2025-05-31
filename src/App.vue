@@ -9,7 +9,7 @@
       />
       <Button label="Search" severity="info"  @click="validateAndSearch()"/>
       <Button label="Reset" severity="info"   @click="resetData()"/>
-      <Button label=" Add New Bike" severity="success"  @click="openCanvas = true"/>
+      <Button label=" Add New Bike" severity="success"  @click="createNewBike()"/>
     </div>
 
     <!-- Toast -->
@@ -88,7 +88,7 @@
           :disabled="currentPage === totalPages"/>
       </div>
     </div>
-    <Drawer  v-model:visible="openCanvas" header="AddNewBike" position="right">
+    <Drawer  v-model:visible="openCanvas" :header="headerTitle" position="right">
       <template v-if='openCanvas'>
         <AddNewBike  @submitedData='addNewBike' :editBikeObj="editBikeObj"></AddNewBike>
       </template>
@@ -110,6 +110,7 @@ const searchTerm = ref('')
 const filteredData = ref([])
 const openCanvas = ref(false)
 const editBikeObj = ref({})
+const headerTitle = ref('Add New Bike')
 
 const showToast = (msg) => {
   toast.value = { visible: true, message: msg }
@@ -132,7 +133,10 @@ const getVehicleDetails = async () => {
     }, 2000)
   }
 }
-
+const createNewBike = ()=>{
+  openCanvas.value = true,
+  headerTitle.value ='Add New Bike'
+}
 const validateAndSearch = ()=>{
     if (!searchTerm.value.trim()) return 
   filteredData.value =  bikesInfo.value.filter((bike) =>
@@ -166,6 +170,7 @@ const changePage = (page) => {
 }
 
 const editBike = (bike) => {
+  headerTitle.value = 'Edit Bike'
    openCanvas.value =  true
   editBikeObj.value = bike
 }

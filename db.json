@@ -1,42 +1,6 @@
 {
   "bikes": [
     {
-      "id": "5",
-      "company": "Yamaha",
-      "engineCC": 150,
-      "priceINR": 98000,
-      "year": 2024,
-      "color": "Redddy",
-      "mileage": "50 kmpl"
-    },
-    {
-      "id": "7",
-      "company": "Royal Enfield",
-      "engineCC": 350,
-      "priceINR": 185000,
-      "year": 2024,
-      "color": "Black",
-      "mileage": "35 kmpl"
-    },
-    {
-      "id": "9",
-      "company": "Honda",
-      "engineCC": 160,
-      "priceINR": 105000,
-      "year": 2024,
-      "color": "White",
-      "mileage": "50 kmpl"
-    },
-    {
-      "id": "12",
-      "company": "Hero",
-      "engineCC": 110,
-      "priceINR": 72000,
-      "year": 2024,
-      "color": "Blue",
-      "mileage": "65 kmpl"
-    },
-    {
       "id": "15",
       "company": "Royal Enfield",
       "engineCC": 411,
@@ -199,15 +163,6 @@
       "mileage": "35 kmpl"
     },
     {
-      "id": "33",
-      "company": "Honda",
-      "engineCC": 150,
-      "priceINR": 99000,
-      "year": 2024,
-      "color": "Red",
-      "mileage": "52 kmpl"
-    },
-    {
       "id": "34",
       "company": "TVS",
       "engineCC": 110,
@@ -278,6 +233,51 @@
       "year": 2025,
       "mileage": 133,
       "color": "red"
+    },
+    {
+      "id": "7626",
+      "company": "kawasaki ninja",
+      "engineCC": 300,
+      "priceINR": 400000,
+      "year": 2025,
+      "mileage": 12,
+      "color": "green"
+    },
+    {
+      "id": "53c8",
+      "company": "BMW",
+      "engineCC": 300,
+      "priceINR": 500000,
+      "year": 2025,
+      "mileage": "12 kmpl",
+      "color": "white and blue"
+    },
+    {
+      "id": "ece2",
+      "company": "BMW1",
+      "engineCC": 300,
+      "priceINR": 500000,
+      "year": 2025,
+      "mileage": "12kmpl",
+      "color": "white and blue"
+    },
+    {
+      "id": "c2b9",
+      "company": "duke ",
+      "engineCC": 180,
+      "priceINR": 210000,
+      "year": 2025,
+      "mileage": "18kmpl",
+      "color": "Orange"
+    },
+    {
+      "id": "3d61",
+      "company": "bajaj",
+      "engineCC": 120,
+      "priceINR": 400000,
+      "year": 2025,
+      "mileage": "30kmpl",
+      "color": "white"
     }
   ]
 }

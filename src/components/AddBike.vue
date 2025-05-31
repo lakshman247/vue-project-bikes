@@ -34,7 +34,7 @@
       <!-- Mileage -->
       <div>
         <label class="block mb-1 font-medium">Mileage (kmpl)</label>
-        <InputNumber v-model="form.mileage" class="w-full" :class="{ 'p-invalid': errors.mileage }" />
+        <InputText v-model="form.mileage" class="w-full" :class="{ 'p-invalid': errors.mileage }" />
         <small v-if="errors.mileage" class="text-red-500">{{ errors.mileage }}</small>
       </div>
 
@@ -71,13 +71,12 @@ const errors = ref({})
 
 const validateForm = () => {
   errors.value = {}
-debugger
-  if (!form.value.company.trim()) errors.value.company = 'Company is required'
-  if (!form.value.engineCC || form.value.engineCC <= 0) errors.value.engineCC = 'Valid CC required'
-  if (!form.value.priceINR || form.value.priceINR <= 0) errors.value.priceINR = 'Valid price required'
-  if (!form.value.year || form.value.year < 2000 || form.value.year > 2100) errors.value.year = 'Enter valid year'
-  if (!form.value.mileage || form.value.mileage <= 0) errors.value.mileage = 'Mileage required'
-  if (!form.value.color) errors.value.color = 'At least one color required'
+  if (!form?.value?.company?.trim()) errors.value.company = 'Company is required'
+  if (!form?.value?.engineCC || form?.value?.engineCC <= 0) errors.value.engineCC = 'Valid CC required'
+  if (!form?.value?.priceINR || form?.value?.priceINR <= 0) errors.value.priceINR = 'Valid price required'
+  if (!form?.value?.year || form?.value?.year < 2000 || form.value.year > 2100) errors.value.year = 'Enter valid year'
+  if (!form?.value?.mileage) errors.value.mileage = 'Mileage required'
+  if (!form?.value?.color) errors.value.color = 'At least one color required'
 
   return Object.keys(errors.value).length === 0
 }
@@ -89,7 +88,7 @@ const handleSubmit = () => {
   }
 }
 onMounted(() => {
-    if(props.editBikeObj){
+    if(props?.editBikeObj){
         form.value = {...props.editBikeObj}
     }
 })
