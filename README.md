@@ -74,10 +74,11 @@ http://localhost:3001/bikes
 
 ```
 src/
-├── App.vue           # Main component
-├── AddBike.vue       # child component
-├── index.js          # Entry point
-└── db.json           # Sample bike data (used by json-server)
+├── components/
+│   └── AddBike.vue     # child component
+├── App.vue             # main component
+├── index.js            # entry point
+└── db.json             # Sample bike data (used by json-server)
 ```
 
 ---
